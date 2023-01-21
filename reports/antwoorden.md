@@ -15,6 +15,9 @@ De dropout staat op 0.5, hij heeft in een blog gelezen dat dit de beste settings
 - Wat vind je van de architectuur die hij heeft uitgekozen (een Neuraal netwerk met drie Linear layers)? Wat zijn sterke en zwakke kanten van een model als dit in het algemeen? En voor dit specifieke probleem?
 - Wat vind je van de keuzes die hij heeft gemaakt in de LinearConfig voor het aantal units ten opzichte van de data? En van de dropout?
 
+### Antwoord 1a
+Zie klad Word file
+
 ## 1b
 Als je in de forward methode van het Linear model kijkt (in `tentamen/model.py`) dan kun je zien dat het eerste dat hij doet `x.mean(dim=1)` is. 
 
@@ -22,12 +25,18 @@ Als je in de forward methode van het Linear model kijkt (in `tentamen/model.py`)
 - Hoe had hij dit ook kunnen oplossen?
 - Wat zijn voor een nadelen van de verschillende manieren om deze stap te doen?
 
+### Antwoord 1b
+Zie klad Word file
+
 ### 1c
 Omdat jij de cursus Machine Learning hebt gevolgd kun jij hem uitstekend uitleggen wat een betere architectuur zou zijn.
 
 - Beschrijf de architecturen die je kunt overwegen voor een probleem als dit. Het is voldoende als je beschrijft welke layers in welke combinaties je zou kunnen gebruiken.
 - Geef vervolgens een indicatie en motivatie voor het aantal units/filters/kernelsize etc voor elke laag die je gebruikt, en hoe je omgaat met overgangen (bv van 3 naar 2 dimensies). Een indicatie is bijvoorbeeld een educated guess voor een aantal units, plus een boven en ondergrens voor het aantal units. Met een motivatie laat je zien dat jouw keuze niet een random selectie is, maar dat je 1) andere problemen hebt gezien en dit probleem daartegen kunt afzetten en 2) een besef hebt van de consquenties van het kiezen van een range.
 - Geef aan wat jij verwacht dat de meest veelbelovende architectuur is, en waarom (opnieuw, laat zien dat je niet random getallen noemt, of keuzes maakt, maar dat jij je keuze baseert op ervaring die je hebt opgedaan met andere problemen).
+
+### Antwoord 1c
+Zie klad Word file
 
 ### 1d
 Implementeer jouw veelbelovende model: 
@@ -48,6 +57,10 @@ Hieronder een voorbeeld hoe je een plaatje met caption zou kunnen invoegen.
     </figcaption>
   </p>
 </figure>
+
+### Klad comments 1d
+GRU model toegepast in 02_model_design
+Tensor board image toevoegen
 
 ## Vraag 2
 Een andere collega heeft alvast een hypertuning opgezet in `dev/scripts/02_tune.py`.
