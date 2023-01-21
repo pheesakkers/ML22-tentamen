@@ -18,6 +18,16 @@ De dropout staat op 0.5, hij heeft in een blog gelezen dat dit de beste settings
 ### Antwoord 1a
 Zie klad Word file
 
+<figure>
+  <p align = "center">
+    <img src="img/adjustedDropOut_01_model_design.png" style="width:50%">
+    <figcaption align="center">
+      <b> Fig 1.Verlagen van de dropout rate</b>
+    </figcaption>
+  </p>
+</figure>
+
+
 ## 1b
 Als je in de forward methode van het Linear model kijkt (in `tentamen/model.py`) dan kun je zien dat het eerste dat hij doet `x.mean(dim=1)` is. 
 
@@ -58,9 +68,19 @@ Hieronder een voorbeeld hoe je een plaatje met caption zou kunnen invoegen.
   </p>
 </figure>
 
-### Klad comments 1d
-GRU model toegepast in 02_model_design
-Tensor board image toevoegen
+### Antwoord 1d
+zie klad word.
+
+<figure>
+  <p align = "center">
+    <img src="img/Experiments.png" style="width:50%">
+    <figcaption align="center">
+      <b> Fig 2.Experimenten op GRU architectuur</b>
+    </figcaption>
+  </p>
+</figure>
+
+
 
 ## Vraag 2
 Een andere collega heeft alvast een hypertuning opgezet in `dev/scripts/02_tune.py`.
