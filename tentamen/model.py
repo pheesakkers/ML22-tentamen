@@ -33,6 +33,25 @@ class Linear(nn.Module):
         x = self.encoder(x)
         return x
 
+# Class Gru Model:
+class gruModel(nn.Module):
+    def __init__(self, config: Dict) -> None:
+        super().__init__()
+
+        self.rnn = nn.GRU(
+            input_size=config["input"],
+            hidden_size=config["hidden"],
+            dropout=config["dropout"],
+            batch_first=True,
+            num_layers=config["num_layers"],
+        )
+        self.linear = nn.Linear(config["hidden"], config["output"])
+
+    def forward(self, x: Tensor) -> Tensor:
+        x, _ = self.rnn(x)
+        last_step = x[:, -1, :]
+        yhat = self.linear(last_step)
+        return yhat
 
 class Accuracy:
     def __repr__(self) -> str:
