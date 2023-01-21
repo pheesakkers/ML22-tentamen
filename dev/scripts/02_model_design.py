@@ -21,7 +21,7 @@ if __name__ == "__main__":
             input=13,
             output=20,
             tunedir=presets.logdir,
-            hidden=64,
+            hidden=100,
             dropout=0.2,
             num_layers=4,
         ),
@@ -31,7 +31,7 @@ if __name__ == "__main__":
         model = gruModel(config.dict())  # type: ignore
 
         trainedmodel = trainloop(
-            epochs=1,
+            epochs=15,
             model=model,  # type: ignore
             optimizer=torch.optim.Adam,
             learning_rate=1e-3,
