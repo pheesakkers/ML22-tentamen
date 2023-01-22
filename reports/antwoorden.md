@@ -58,7 +58,7 @@ Zoals in1A omschreven zou een RNN beter bij dit probleem passen. Het verleden in
 -	Hidden Layers = 64 (dit is een educated guess en startpunt voor de ondergrens en zal tijdens experimenten opgehoogd worden)
 -	Layers = 2 tot waarschijnlijk 4 (een goede methode om het aantal layers te bepalen is simpelweg experimenteren tot ik zie dat het model gaat overfitten. Afhankelijk van de resultaten kan ik de dropout verhogen of besluiten om geen extra layers meer toe te voegen) 
 -	Dropout = 0.2 (ook een educated guess en op basis van een eerder experiment op het model van de junior consultant waarbij we al zagen dat 0.5 te hoog is in dit geval)
--	In de forward methode neem ik d.m.v. X[:-1:] de laatste output mee (last step)
+-	In de forward methode neem ik d.m.v. X[: -1 :] de laatste output mee (last step)
 -	Ik gebruik CrossEntropy loss omdat we hier een classificatie probleem hebben
 -	De optimizer ADAM met LR 1-3 bleek tijdens de lessen en oefeningen vaak het beste te werken en laat ik dus zo staan.
 
@@ -205,7 +205,7 @@ De best presterende architectuur laat zien dat onderstaande settings optimaal zi
 -	Hidden size van 252
 -	3 layers
 
-Deze komt uit op een accuracy van 96%. Kijk ik naar de 2de best presterende architectuur dan zie ik dat de dropout (0.2) en hidden size (125) een stuk lager zijn. Hierbij komen we uit op 93%. Afhankelijk van de business requirements kan dit wellicht al voldoende zijn. De batch size is hier echter wel een stuk hoger (353). Voor de final settings zal ik dus gebruik maken van de best presterende settings. 
+Deze komt uit op een accuracy van 96,36%. Kijk ik naar de 2de best presterende architectuur dan zie ik dat de dropout (0.2) en hidden size (125) een stuk lager zijn. Hierbij komen we uit op 93%. Afhankelijk van de business requirements kan dit wellicht al voldoende zijn. De batch size is hier echter wel een stuk hoger (353). Voor de final settings zal ik dus gebruik maken van de best presterende settings. 
 <figure>
   <p align = "center">
     <img src="img/Hypertune Final Round.png" style="width:100%">
@@ -251,7 +251,6 @@ De uiteindelijke architectuur wordt daarom als volgt vastgelegd:
 -	Layers = 3
 -	Epochs = 15
 -	Learning Rate = 1e-3
-
 
 ## Vraag 3
 ### 3a
