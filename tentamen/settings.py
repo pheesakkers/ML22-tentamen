@@ -32,9 +32,9 @@ presets = Settings(
     modeldir=root / "models",
     logdir=root / "logs",
     modelname="model.pt",
-    batchsize=128,
+    batchsize=119,
 )
-
+#batchsize was 128
 
 class BaseSearchSpace(BaseModel):
     input: int
@@ -65,7 +65,7 @@ class LinearSearchSpace(BaseSearchSpace):
 
 #GRU SearchSpace Config
 class gru_modelSearchSpace(BaseSearchSpace):
-    hidden: Union[int, SAMPLE_INT] = tune.randint(85, 100)
+    hidden: Union[int, SAMPLE_INT] = tune.randint(100, 256)
     num_layers: Union[int, SAMPLE_INT] = tune.randint(2, 4)
-    dropout: Union[float, SAMPLE_FLOAT] = tune.uniform(0.2, 0.3)
-    batchsize: Union[int, SAMPLE_INT] = tune.randint(32, 512)
+    dropout: Union[float, SAMPLE_FLOAT] = tune.uniform(0.2, 0.5)
+    batchsize: Union[int, SAMPLE_INT] = tune.randint(80, 600)
