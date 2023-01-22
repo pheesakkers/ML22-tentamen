@@ -33,6 +33,7 @@ class Linear(nn.Module):
         x = self.encoder(x)
         return x
 
+
 # Class Gru Model:
 class gruModel(nn.Module):
     def __init__(self, config: Dict) -> None:
@@ -52,6 +53,7 @@ class gruModel(nn.Module):
         last_step = x[:, -1, :]
         yhat = self.linear(last_step)
         return yhat
+
 
 class Accuracy:
     def __repr__(self) -> str:
