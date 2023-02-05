@@ -1,4 +1,6 @@
 ```
+Peter Heesakkers
+
 ├── README.md       <- this file
 ├── data            <- store your data here
 │   ├── raw           <- raw, initial data
